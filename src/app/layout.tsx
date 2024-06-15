@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import Header from "./component/Header";
+import { Box, Typography } from '@mui/material';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,39 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        <Box mt={10} display="flex" flexDirection={{ xs: 'column', md: 'row' }} justifyContent="center">
+          {/* Top Ad Placeholder for small screens */}
+          <Box width="100%" bgcolor="#f5f5f5" p={2} textAlign="center" display={{ xs: 'block', md: 'none' }}>
+            {/* Ad content or component can go here */}
+            <Typography variant="body2" color="textSecondary">Top Ad Space</Typography>
+          </Box>
+
+          {/* Left Ad Placeholder for medium to large screens */}
+          <Box width={{ xs: '100%', md: '200px' }} bgcolor="#f5f5f5" p={2} textAlign="center" display={{ xs: 'none', md: 'block' }}>
+            {/* Ad content or component can go here */}
+            <Typography variant="body2" color="textSecondary">Left Ad Space</Typography>
+          </Box>
+
+          {/* Main Content Area */}
+          <Box flex={1} maxWidth="1200px" px={2}>
+            {children}
+          </Box>
+
+          {/* Right Ad Placeholder for medium to large screens */}
+          <Box width={{ xs: '100%', md: '200px' }} bgcolor="#f5f5f5" p={2} textAlign="center" display={{ xs: 'none', md: 'block' }}>
+            {/* Ad content or component can go here */}
+            <Typography variant="body2" color="textSecondary">Right Ad Space</Typography>
+          </Box>
+
+          {/* Bottom Ad Placeholder for small screens */}
+          <Box width="100%" bgcolor="#f5f5f5" p={2} textAlign="center" display={{ xs: 'block', md: 'none' }}>
+            {/* Ad content or component can go here */}
+            <Typography variant="body2" color="textSecondary">Bottom Ad Space</Typography>
+          </Box>
+        </Box>
+      </body>
     </html>
   );
 }
