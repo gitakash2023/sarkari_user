@@ -1,9 +1,12 @@
 import React from 'react'
+import UserRegistrationForm from "../component/UserRegistrationForm"
 
-function page() {
+function FilteredJob() {
   return (
-    <div>page</div>
+    <div>
+      <UserRegistrationForm/>
+    </div>
   )
 }
 
-export default page
+export default FilteredJob

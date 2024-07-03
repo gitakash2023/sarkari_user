@@ -31,19 +31,20 @@ const Header = () => {
     { text: 'Admit Card', href: '/admit-card' },
     { text: 'Sarkari Result', href: '/sarkari-result' },
     { text: 'Exam Answer Key', href: '/exam-answer-key' },
-    { text: ' Books', href: '/books' },
-    { text: ' Old Papers', href: '/old-papers' },
+    { text: 'Books', href: '/books' },
+    { text: 'Old Papers', href: '/old-papers' },
     { text: 'Mock Test', href: '/mock-test' },
     { text: 'Filtered Job', href: '/filtered-job' },
     { text: 'Blogs', href: '/blogs' },
     { text: 'Web Stories', href: '/web-stories' },
+    // { text: 'Profile', href: '/profile' } // Added profile page link
   ];
 
   const MenuLink = styled(Link)(({ theme }) => ({
     color: 'white',
     textDecoration: 'none',
     position: 'relative',
-    fontSize: '0.875rem', // Reduced text size
+    fontSize: '0.875rem',
     '&:hover': {
       color: theme.palette.secondary.main,
     },

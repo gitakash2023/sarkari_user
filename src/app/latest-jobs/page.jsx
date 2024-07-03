@@ -45,9 +45,9 @@ const LatestJobsPage = () => {
       </Typography>
       <ul style={{ padding: 0 }}>
         {jobsOnPage.map((job) => (
-          <li key={job.id} style={{ marginBottom: '10px', listStyle: 'none' }}>
+          <li key={job.id} style={{ margin: '10px',  }}>
             <Link href={`/latest-jobs/${job.id}`} style={{ color: 'blue' }}>
-              {job.title} at {job.company}, {job.location}
+              {job.title} 
             </Link>
           </li>
         ))}
